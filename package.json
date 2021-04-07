@@ -1,0 +1,26 @@
+{
+  "name": "bcdk-v2-brainstorm",
+  "version": "0.0.1",
+  "description": "Toolkit for BC Government developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekroberts/bcdk-v2-brainstorm.git"
+  },
+  "keywords": [
+    "bcdk",
+    "nrdk",
+    "pipeline",
+    "openshift",
+    "aws"
+  ],
+  "author": "Derek Roberts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derekroberts/bcdk-v2-brainstorm/issues"
+  },
+  "homepage": "https://github.com/derekroberts/bcdk-v2-brainstorm#readme"
+}
