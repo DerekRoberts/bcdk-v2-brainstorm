@@ -1,31 +1,30 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from "@oclif/command";
+let cmd = require("node-cmd");
 
-export default class Hello extends Command {
-  static description = 'describe the command here'
+export default class Login extends Command {
+  static description =
+    "Checks for oc login.  If necessary, provides a token link.";
 
   static examples = [
-    `$ bcoc hello
-hello world from ./src/hello.ts!
+    `
+$ bcoc login
+> Logged in as: <USERNAME>
 `,
-  ]
-
-  static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
-  }
-
-  static args = [{name: 'file'}]
+  ];
 
   async run() {
-    const {args, flags} = this.parse(Hello)
-
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from ./src/commands/hello.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    cmd.run(`oc whoami`, function (err, data, stderr) {
+      if (stderr) {
+        console.log("\nErr:", stderr);
+      } else if (data) {
+        console.log("\nLogged in as:", data);
+      } else {
+        console.log(
+          "\nNot logged in.  Visit the link below to obtain a login token.",
+          "\nhttps://oauth-openshift.apps.silver.devops.gov.bc.ca/oauth/token/request",
+          "\n"
+        );
+      }
+    });
   }
 }
