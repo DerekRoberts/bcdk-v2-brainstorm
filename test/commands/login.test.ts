@@ -5,6 +5,6 @@ describe("login", () => {
     .stdout()
     .command(["login"])
     .it("runs login", (ctx) => {
-      expect(ctx.stdout).to.equal("Logged in");
+      expect(ctx.stdout).to.contains("Logged in");
     });
 });
