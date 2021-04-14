@@ -14,9 +14,7 @@ $ bcoc login
 
   async run() {
     cmd.run(`oc whoami`, function (err, data, stderr) {
-      if (stderr) {
-        console.log("\nErr:", stderr);
-      } else if (data) {
+      if (data) {
         console.log("\nLogged in as:", data);
       } else {
         console.log(
