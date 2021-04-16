@@ -19,7 +19,7 @@ $ npm install -g bcoc
 $ bcoc COMMAND
 running command...
 $ bcoc (-v|--version|version)
-bcoc/0.0.1 linux-x64 node-v14.16.0
+bcoc/0.0.0 linux-x64 node-v14.16.0
 $ bcoc --help [COMMAND]
 USAGE
   $ bcoc COMMAND
@@ -28,25 +28,20 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`bcoc generator [FILE]`](#bcoc-generator-file)
+* [`bcoc generator [ENVFILE]`](#bcoc-generator-envfile)
 * [`bcoc help [COMMAND]`](#bcoc-help-command)
 * [`bcoc login`](#bcoc-login)
 
-## `bcoc generator [FILE]`
+## `bcoc generator [ENVFILE]`
 
-describe the command here
+Generate base env file for use with bcoc
 
 ```
 USAGE
-  $ bcoc generator [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ bcoc generator [ENVFILE]
 ```
 
-_See code: [src/commands/generator.ts](https://github.com/derekroberts/bcoc/blob/v0.0.1/src/commands/generator.ts)_
+_See code: [src/commands/generator.ts](https://github.com/derekroberts/bcoc/blob/v0.0.0/src/commands/generator.ts)_
 
 ## `bcoc help [COMMAND]`
 
@@ -67,7 +62,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2
 
 ## `bcoc login`
 
-Checks for oc login.  If necessary, provides a token link.
+Check for oc login, providing token link if necessary
 
 ```
 USAGE
@@ -79,5 +74,5 @@ EXAMPLE
        > Logged in as: <USERNAME>
 ```
 
-_See code: [src/commands/login.ts](https://github.com/derekroberts/bcoc/blob/v0.0.1/src/commands/login.ts)_
+_See code: [src/commands/login.ts](https://github.com/derekroberts/bcoc/blob/v0.0.0/src/commands/login.ts)_
 <!-- commandsstop -->

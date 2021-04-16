@@ -2,7 +2,7 @@ import {Command} from '@oclif/command'
 
 export default class Login extends Command {
   static description =
-  'Checks for oc login.  If necessary, provides a token link.';
+  'Checks for oc login, providing token link if necessary';
 
   static examples = [
     `

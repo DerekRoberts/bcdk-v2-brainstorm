@@ -1,7 +1,7 @@
 import {Command} from '@oclif/command'
 
 export default class Generator extends Command {
-  static description = 'Generates base configuration for use with bcoc'
+  static description = 'Generate base env file for use with bcoc'
 
   static args = [{name: 'envFile'}]
 
