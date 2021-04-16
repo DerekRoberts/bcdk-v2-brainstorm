@@ -6,7 +6,7 @@ BC Gov wrapper for OpenShift&#39;s oc CLI
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/bcoc.svg)](https://npmjs.org/package/bcoc)
 [![Downloads/week](https://img.shields.io/npm/dw/bcoc.svg)](https://npmjs.org/package/bcoc)
-[![License](https://img.shields.io/npm/l/bcoc.svg)](https://github.com/DerekRoberts/bcdk-v2-brainstorm/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/bcoc.svg)](https://github.com/DerekRoberts/bcoc/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -19,7 +19,7 @@ $ npm install -g bcoc
 $ bcoc COMMAND
 running command...
 $ bcoc (-v|--version|version)
-bcoc/0.0.1 linux-x64 node-v10.19.0
+bcoc/0.0.1 linux-x64 node-v14.16.0
 $ bcoc --help [COMMAND]
 USAGE
   $ bcoc COMMAND
@@ -28,28 +28,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`bcoc hello [FILE]`](#bcoc-hello-file)
+* [`bcoc generator [FILE]`](#bcoc-generator-file)
 * [`bcoc help [COMMAND]`](#bcoc-help-command)
+* [`bcoc login`](#bcoc-login)
 
-## `bcoc hello [FILE]`
+## `bcoc generator [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ bcoc hello [FILE]
+  $ bcoc generator [FILE]
 
 OPTIONS
   -f, --force
   -h, --help       show CLI help
   -n, --name=name  name to print
-
-EXAMPLE
-  $ bcoc hello
-  hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/DerekRoberts/bcdk-v2-brainstorm/blob/v0.0.1/src/commands/hello.ts)_
+_See code: [src/commands/generator.ts](https://github.com/derekroberts/bcoc/blob/v0.0.1/src/commands/generator.ts)_
 
 ## `bcoc help [COMMAND]`
 
@@ -67,4 +64,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `bcoc login`
+
+Checks for oc login.  If necessary, provides a token link.
+
+```
+USAGE
+  $ bcoc login
+
+EXAMPLE
+
+       $ bcoc login
+       > Logged in as: <USERNAME>
+```
+
+_See code: [src/commands/login.ts](https://github.com/derekroberts/bcoc/blob/v0.0.1/src/commands/login.ts)_
 <!-- commandsstop -->
