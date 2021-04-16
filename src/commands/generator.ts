@@ -70,13 +70,20 @@ export default class Generator extends Command {
     const saveFile = this.parse(Generator).args.envFile
 
     inquirer.prompt(questions).then(answers => {
-      console.log(`\nSave to ${saveFile}:`, answers)
-      console.log('Press enter to save or Ctrl+C to exit.')
-      require('fs').writeFile(
-        this.parse(Generator).args.envFile ?? 'bcoc.env',
-        JSON.stringify(answers, null, 2),
-        err => !err || console.log(err)
-      )
+      console.log(`\n${saveFile}\n`, answers)
+      const confirm = {type: 'confirm', name: 'save', message: 'Save changes?', default: true}
+      inquirer.prompt(confirm).then(a => {
+        console.log(a)
+        if (a.save == true) {
+          require('fs').writeFile(
+            saveFile ?? 'bcoc.env',
+            JSON.stringify(answers, null, 2),
+            err => !err || console.log(err)
+          )
+        } else {
+          console.log('Changes not saved')
+        }
+      })
     })
   }
 }
