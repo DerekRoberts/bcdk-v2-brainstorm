@@ -38,6 +38,15 @@ COMMAND=${1:-}
 	exit
 }
 
-# Use nodemon
+# Verify nodemon is installed
+#
+if (! which nodemon)
+then
+	echo -e "\n Install nodemon globally to use this tool.  E.g.:"
+	echo -e "   $ npm i -g nodemon\n"
+	exit
+fi
+
+# Run commanbd on save using nodemon
 #
 nodemon -I --exec "clear; bcoc ${COMMAND}" ${SCRIPT_DIR}/../src/commands/*
