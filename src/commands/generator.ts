@@ -4,7 +4,7 @@ export default class Generator extends Command {
   static description = 'Generates base configuration for use with bcoc'
 
   async run() {
-    // https://www.npmjs.com/package//inquirer
+    // https://www.npmjs.com/package/inquirer
     const inquirer = require('inquirer')
 
     const questions = [
@@ -66,8 +66,12 @@ export default class Generator extends Command {
     ]
 
     inquirer.prompt(questions).then(answers => {
-      console.log('\nPrompted:')
-      console.log(JSON.stringify(answers, null, ' '))
+      console.log('\n', answers)
+      require('fs').writeFile(
+        'bcoc.env',
+        JSON.stringify(answers, null, 2),
+        err => !err || console.log(err)
+      )
     })
   }
 }
