@@ -1,30 +1,22 @@
-import {Command, flags} from '@oclif/command'
+import {Command} from '@oclif/command'
 
 export default class Generator extends Command {
-  static description = 'describe the command here'
-
-  // static flags = {
-  //   help: flags.help({char: 'h'}),
-  //   // flag with a value (-n, --name=VALUE)
-  //   name: flags.string({char: 'n', description: 'name to print'}),
-  //   // flag with no value (-f, --force)
-  //   force: flags.boolean({char: 'f'}),
-  // }
-
-  // static args = [{name: 'file'}]
+  static description = 'Generates base configuration for use with bcoc'
 
   async run() {
+    // https://www.npmjs.com/package//inquirer
     const inquirer = require('inquirer')
+
     const questions = [
       {
         type: 'input',
         name: 'prefix',
         message: 'Application prefix:',
         validate: function (value) {
-          if (value.match(/^[a-z0-9]+$/i)) {
+          if (value.match(/^[a-z0-9]{3,32}$/i)) {
             return true
           }
-          return 'Please do not use spaces, tabs or special characters'
+          return 'Req: alphanumeric, 3-32 characters'
         },
       },
       {
@@ -32,10 +24,10 @@ export default class Generator extends Command {
         name: 'project',
         message: 'Project namespace:',
         validate: function (value) {
-          if (value.match(/^[a-z0-9]+$/i)) {
+          if (value.match(/^[a-z0-9]{6,32}$/i)) {
             return true
           }
-          return 'Please do not use spaces, tabs or special characters'
+          return 'Req: alphanumeric, 6-32 characters'
         },
       },
       {
@@ -43,10 +35,10 @@ export default class Generator extends Command {
         name: 'component',
         message: 'Initial component:',
         validate: function (value) {
-          if (value.match(/^[a-z0-9]+$/i)) {
+          if (value.match(/^[a-z0-9]{1,32}$/i)) {
             return true
           }
-          return 'Please do not use spaces, tabs or special characters'
+          return 'Req: alphanumeric, 1-32 characters'
         },
       },
       {
