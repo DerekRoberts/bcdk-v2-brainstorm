@@ -3,10 +3,10 @@ bcoc
 
 BC Gov wrapper for OpenShift&#39;s oc CLI
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/bcoc.svg)](https://npmjs.org/package/bcoc)
-[![Downloads/week](https://img.shields.io/npm/dw/bcoc.svg)](https://npmjs.org/package/bcoc)
-[![License](https://img.shields.io/npm/l/bcoc.svg)](https://github.com/DerekRoberts/bcoc/blob/master/package.json)
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg?style=for-the-badge)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/bcoc.svg?style=for-the-badge)](https://npmjs.org/package/bcoc)
+[![Lifecycle](https://img.shields.io/badge/Lifecycle-Experimental-339999?style=for-the-badge)](https://img.shields.io/badge/Lifecycle-Experimental-339999)
+[![MIT License](https://img.shields.io/github/license/bcgov/wps.svg?style=for-the-badge)](/LICENSE)
 
 <!-- toc -->
 * [Usage](#usage)
