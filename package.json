@@ -67,6 +67,7 @@
     "url": "git+https://github.com/derekroberts/bcoc.git"
   },
   "scripts": {
+    "lint": "./node_modules/.bin/eslint . --ext .js,.ts",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
