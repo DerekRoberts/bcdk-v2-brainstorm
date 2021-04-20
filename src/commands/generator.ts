@@ -74,7 +74,7 @@ export default class Generator extends Command {
       const confirm = {type: 'confirm', name: 'save', message: 'Save changes?', default: true}
       inquirer.prompt(confirm).then(a => {
         console.log(a)
-        if (a.save == true) {
+        if (a.save === true) {
           require('fs').writeFile(
             saveFile ?? 'bcoc.env',
             JSON.stringify(answers, null, 2),
