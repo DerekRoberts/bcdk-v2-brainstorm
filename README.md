@@ -1,5 +1,4 @@
-bcoc
-====
+# bcoc
 
 BC Gov wrapper for OpenShift&#39;s oc CLI
 
@@ -9,11 +8,15 @@ BC Gov wrapper for OpenShift&#39;s oc CLI
 [![MIT License](https://img.shields.io/github/license/bcgov/wps.svg?style=for-the-badge)](/LICENSE)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g bcoc
 $ bcoc COMMAND
@@ -25,12 +28,16 @@ USAGE
   $ bcoc COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`bcoc generator [ENVFILE]`](#bcoc-generator-envfile)
-* [`bcoc help [COMMAND]`](#bcoc-help-command)
-* [`bcoc login`](#bcoc-login)
+
+- [`bcoc generator [ENVFILE]`](#bcoc-generator-envfile)
+- [`bcoc help [COMMAND]`](#bcoc-help-command)
+- [`bcoc login`](#bcoc-login)
 
 ## `bcoc generator [ENVFILE]`
 
@@ -75,4 +82,5 @@ EXAMPLE
 ```
 
 _See code: [src/commands/login.ts](https://github.com/derekroberts/bcoc/blob/v0.0.0/src/commands/login.ts)_
+
 <!-- commandsstop -->
