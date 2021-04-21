@@ -72,6 +72,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/prettier . --check --ignore-unknown",
     "lint:fix": "./node_modules/.bin/prettier . --write --ignore-unknown",
+    "prepare": "husky install",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
