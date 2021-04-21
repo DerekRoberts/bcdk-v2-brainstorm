@@ -1,1 +1,12 @@
+# Out of the box
 /lib
+
+# Ignore node_modules/
+node_modules
+
+# Ignore artifacts
+build
+coverage
+
+# Include hidden files in repo root (hidden folders remain ignored)
+!.*

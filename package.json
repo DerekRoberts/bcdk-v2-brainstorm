@@ -28,9 +28,16 @@
     "eslint": "^5.16.0",
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.1.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "globby": "^10.0.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "mocha": "^5.2.0",
+    "np": "^7.4.0",
     "nyc": "^14.1.1",
+    "prettier": "2.2.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   },
@@ -66,6 +73,10 @@
     "url": "git+https://github.com/derekroberts/bcoc.git"
   },
   "scripts": {
+    "lint": "./node_modules/.bin/eslint . --ext .js,.ts",
+    "lint:fix": "./node_modules/.bin/eslint . --ext .js,.ts --fix",
+    "lint:staged": "./node_modules/.bin/lint-staged",
+    "preinstall": "husky install",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
@@ -75,5 +86,8 @@
   "types": "lib/index.d.ts",
   "directories": {
     "test": "test"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "./node_modules/.bin/eslint --cache --fix"
   }
 }
