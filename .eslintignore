@@ -1,5 +1,9 @@
 # Out of the box
 /lib
 
-# Ignore hidden folders
-.*/
+# Ignore node_modules/
+node_modules
+
+# Ignore artifacts
+build
+coverage
