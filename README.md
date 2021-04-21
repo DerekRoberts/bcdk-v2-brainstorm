@@ -4,6 +4,7 @@ BC Gov wrapper for OpenShift&#39;s oc CLI
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg?style=for-the-badge)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/bcoc.svg?style=for-the-badge)](https://npmjs.org/package/bcoc)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
 [![Lifecycle](https://img.shields.io/badge/Lifecycle-Experimental-339999?style=for-the-badge)](https://img.shields.io/badge/Lifecycle-Experimental-339999)
 [![MIT License](https://img.shields.io/github/license/bcgov/wps.svg?style=for-the-badge)](/LICENSE)
 
