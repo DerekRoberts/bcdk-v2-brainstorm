@@ -1,1 +1,5 @@
+# Out of the box
 /lib
+
+# Ignore hidden folders
+.*/
