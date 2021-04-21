@@ -1,9 +1,8 @@
 {
-  "extends": ["oclif", "oclif-typescript", "prettier"],
-  "plugins": ["no-loops", "prettier"],
+  "extends": ["oclif", "oclif-typescript", "plugin:prettier/recommended"],
+  "plugins": ["no-loops"],
   "rules": {
     "no-console": "off",
-    "no-loops/no-loops": 2,
-    "prettier/prettier": "error"
+    "no-loops/no-loops": 2
   }
 }
