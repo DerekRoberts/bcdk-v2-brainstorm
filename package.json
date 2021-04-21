@@ -75,6 +75,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint . --ext .js,.ts",
     "lint:fix": "./node_modules/.bin/eslint . --ext .js,.ts --fix",
+    "lint:staged": "./node_modules/.bin/lint-staged",
     "prepare": "husky install",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
@@ -86,5 +87,7 @@
   "directories": {
     "test": "test"
   },
-  "lint-staged": {}
+  "lint-staged": {
+    "*.{js,ts}": "./node_modules/.bin/eslint --cache --fix"
+  }
 }
