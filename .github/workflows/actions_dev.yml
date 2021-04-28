@@ -7,16 +7,18 @@ on:
 
 jobs:
 
-  envars:
+  environment:
     runs-on: ubuntu-latest
     steps:
+    # https://docs.github.com/en/actions/reference/environment-variables
     - name: Envars
+      if: contains(github.event.issue.labels.*.name, 'actions')
       run: env
 
-  contexts:
-    runs-on: ubuntu-latest
-    steps:
+    # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions
+    # https://docs.github.com/en/actions/reference/events-that-trigger-workflows
     - name: GitHub Contexts object
+      if: contains(github.event.issue.labels.*.name, 'actions')
       run: |
         echo "action: " ${{ github.action }}
         echo "action_path: " ${{ github.action_path }}
