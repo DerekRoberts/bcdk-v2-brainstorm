@@ -1,4 +1,7 @@
-name: Move assigned to In Progress
+name: Project Board Rules
+
+# name: Move assigned to In Progress
+
 on:
   issues:
     types:
@@ -12,8 +15,9 @@ jobs:
           project: Alpha
           column: In Progress
           repo-token: ${{ secrets.PROJECT_AUTOMATION }}
- 
-name: Move new issues and pull requests to Triage
+
+# Move new issues and pull requests to Triage
+
 on:
   issues:
     types: [opened]
