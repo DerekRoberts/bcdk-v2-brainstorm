@@ -78,7 +78,7 @@
     "lint": "./node_modules/.bin/eslint . --ext .js,.ts",
     "lint:fix": "./node_modules/.bin/eslint . --ext .js,.ts --fix",
     "lint:staged": "./node_modules/.bin/lint-staged",
-    "preinstall": "husky install",
+    "preinstall": "./node_modules/.bin/husky install",
     "postpack": "rm -f oclif.manifest.json",
     "pretest": "npm run lint",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
