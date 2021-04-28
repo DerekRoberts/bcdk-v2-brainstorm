@@ -20,4 +20,5 @@ jobs:
       run: |
         echo "action: " ${{ github.action }}
         echo "action_path: " ${{ github.action_path }}
-        echo "event_name: " ${{ github.action_name }}
+        echo "event_name: " ${{ github.event_name }}
+        echo "context object: " ${{ github }}
