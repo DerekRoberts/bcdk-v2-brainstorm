@@ -7,9 +7,17 @@ on:
 
 jobs:
 
-  info:
+  envars:
     runs-on: ubuntu-latest
     steps:
-    - name: Echo
+    - name: Envars
       run: env
 
+  contexts:
+    runs-on: ubuntu-latest
+    steps:
+    - name: GitHub Contexts object
+      run: |
+        echo "action: " ${{ github.action }}
+        echo "action_path: " ${{ github.action_path }}
+        echo "event_name: " ${{ github.action_name }}
