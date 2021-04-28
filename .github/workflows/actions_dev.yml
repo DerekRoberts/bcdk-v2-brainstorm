@@ -1,0 +1,15 @@
+# If a PR is labelled "actions" this workflow prints helpful vars
+
+name: Actions Dev
+
+on:
+  pull_request:
+
+jobs:
+
+  info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Echo
+      run: env
+
