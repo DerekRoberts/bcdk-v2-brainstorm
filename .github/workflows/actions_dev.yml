@@ -40,4 +40,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a one-line script
         # run: echo "github.event.pull_request:" ${{ matrix.label }}
-        run: echo "github object:" ${{ github.event.pull_request.action }}
+        run: |
+          echo "action: " ${{ github.action }}
+          echo "action_path: " ${{ github.action_path }}
+          echo "event_name: " ${{ github.event_name }}
