@@ -5,8 +5,17 @@ name: Actions Dev
 on:
   pull_request:
 
-# jobs:
+jobs:
+  dump:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Dump
+        run: |
+          cat > /dev/null << "EOF"
+          ${{ toJSON(github) }}
+          EOF
 
+# jobs:
 #   environment:
 #     runs-on: ubuntu-latest
 #     steps:
@@ -30,17 +39,17 @@ on:
 
 
 
-jobs:
-  build:
-    # strategy:
-      # matrix:
-      #   label: ${{ github.event.pull_request.action }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        # run: echo "github.event.pull_request:" ${{ matrix.label }}
-        run: |
-          echo "action: " ${{ github.action }}
-          echo "action_path: " ${{ github.action_path }}
-          echo "event_name: " ${{ github.event_name }}
+# jobs:
+#   build:
+#     # strategy:
+#       # matrix:
+#       #   label: ${{ github.event.pull_request.action }}
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Run a one-line script
+#         # run: echo "github.event.pull_request:" ${{ matrix.label }}
+#         run: |
+#           echo "action: " ${{ github.action }}
+#           echo "action_path: " ${{ github.action_path }}
+#           echo "event_name: " ${{ github.event_name }}
