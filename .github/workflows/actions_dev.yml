@@ -5,13 +5,38 @@ name: Actions Dev
 on:
   pull_request:
 
+# jobs:
+
+#   environment:
+#     runs-on: ubuntu-latest
+#     steps:
+#     # https://docs.github.com/en/actions/reference/environment-variables
+#     - name: Envars
+#       if: contains(github.event.issue.labels.*.name, 'actions')
+#       run: env
+
+#     # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions
+#     # https://docs.github.com/en/actions/reference/events-that-trigger-workflows
+#     - name: GitHub Contexts object
+#       if: contains(github.event.issue.labels.*.name, 'actions')
+#       run: |
+#         echo "action: " ${{ github.action }}
+#         echo "action_path: " ${{ github.action_path }}
+#         echo "event_name: " ${{ github.event_name }}
+#         echo "context object: " ${{ github.event.issue.labels }}
+
+#       # if: contains(github.event.issue.labels.*.name, 'actions')
+
+
+
+
 jobs:
   build:
     strategy:
       matrix:
-        label: ${{github.event.pull_request.labels.*.name}}
+        label: ${{github.event.pull_request.*}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Run a one-line script
-        run: echo Hello, world from "${{matrix.label}}"!
+        run: echo github.event.pull_request: "${{matrix.label}}"!
