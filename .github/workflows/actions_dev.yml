@@ -33,10 +33,11 @@ on:
 jobs:
   build:
     strategy:
-      matrix:
-        label: ${{ github.event.pull_request.action }}
+      # matrix:
+      #   label: ${{ github.event.pull_request.action }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Run a one-line script
-        run: echo "github.event.pull_request:" ${{ matrix.label }}!
+        # run: echo "github.event.pull_request:" ${{ matrix.label }}
+        run: echo "github object:" ${{ github.event.pull_request.action }}
