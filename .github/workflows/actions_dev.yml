@@ -32,7 +32,7 @@ on:
 
 jobs:
   build:
-    strategy:
+    # strategy:
       # matrix:
       #   label: ${{ github.event.pull_request.action }}
     runs-on: ubuntu-latest
