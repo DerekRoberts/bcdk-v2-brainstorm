@@ -82,7 +82,7 @@
     "postpack": "rm -f oclif.manifest.json",
     "pretest": "npm run lint",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "test": "nyc --extension .ts mocha --timeout 10000 --forbid-only \"test/**/*.test.ts\"",
     "test:only": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\" && echo \"Linting not included\"",
     "version": "oclif-dev readme && git add README.md"
   },
