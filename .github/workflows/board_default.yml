@@ -1,4 +1,5 @@
 name: Move new issues and pull requests to Triage
+
 on:
   issues:
     types: [opened]
@@ -13,4 +14,4 @@ jobs:
         with:
           project: Alpha
           column: Triage
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.PROJECT_AUTOMATION }}
